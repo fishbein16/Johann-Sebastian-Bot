@@ -24,10 +24,10 @@ class Measure
     }
 
     Note getNextMelodyNote() {
-        if(++melodyNoteNum >= melody.size()) {
+        if(melodyNoteNum >= melody.size()) {
             return Note(-1, 0);
         } else {
-            return melody[melodyNoteNum];
+            return melody[melodyNoteNum++];
         }
     }
 
@@ -46,11 +46,10 @@ class Measure
     }
 
     Note getNextBassNote() {
-        if(bassNoteNum == bass.size()) {
+        if(bassNoteNum >= bass.size()) {
             return Note(-1, 0);
         } else {
-            bassNoteNum++;
-            return bass[bassNoteNum];
+            return bass[bassNoteNum++];
         }
     }
 
