@@ -7,7 +7,7 @@ class Measure
 {
   public:
     Measure(int timeSig, Chord c) {
-        timeSig = timeSignature;
+        timeSignature = timeSig;
         chord = new Chord(c.getRoot(), c.isMajor());
         melodyNoteNum = 0;
         bassNoteNum = 0;
