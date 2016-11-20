@@ -29,6 +29,7 @@ int bass = 0;
   int scale[8] = {NOTE_C6,NOTE_D6,NOTE_E6,NOTE_F6, NOTE_G6, NOTE_A6, NOTE_B6,NOTE_C7};
 
 Phrase *currentPhrase;
+Measure *measure;
 
 void setup() {
   // put your setup code here, to run once:
@@ -40,7 +41,7 @@ void loop() {
   // put your main code here, to run repeatedly: 
   for(int i = 0; i < 4; i++)
   {
-    Melody *measure = currentPhrase->getNextMeasure(i);
+    measure = currentPhrase->getNextMeasure(i);
     Note mel = measure->getNextMelodyNote();
     Note bas = measure->getNextBassNote();
 
